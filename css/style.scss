@@ -621,5 +621,26 @@ nav {
 
 .attribution {
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;
+	right: 10px;
+	font-size: 12px;
+	opacity: 0.7;
+	color: $black;
+
+	&::before {
+		content: "\00A9";
+		font-size: 20px;
+	}
+
+	a {
+		font-size: inherit;
+		text-decoration: none;
+		@extend .discount__percent;
+		transition: background 0.3s linear, color 200ms linear;
+
+		&:hover {
+			background: rgba(255, 125, 26, 0.5);
+			color: $white;
+		}
+	}
 }
